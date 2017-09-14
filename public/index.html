@@ -11,6 +11,7 @@
 </head>
 <body>
 
+
 <div class="container">
     <div class="loader">
         <div id="loader"></div>
@@ -18,14 +19,32 @@
     </div>
     <div class="all-movies"></div>
     <div class="movie-form hidden">
-        <form action="/db.json" method="Post">
-            Movies: <input type="text" name="movie name" value=""><br><br>
-            <input type="submit" value="Submit">
+            <br>
+        <div><h2>What is your favorite movie?</h2></div>
+        <form action="/db.json" method="POST">
+            <p>Movies: <input id="formTitle" type="text" name="movie name" value=""></p>
+            <div>Rating
+                <select id="formRating">
+                    <option class="disabled">Rate Me</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <br>
+            <br>
+            <button id="insertBtn" class="btn btn-primary">Submit</button>
         </form>
+
     </div>
 </div>
 
+
 <script src="/main.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script
         src="http://code.jquery.com/jquery-3.2.1.min.js"
@@ -42,3 +61,7 @@
 </script>
 </body>
 </html>
+
+
+
+

@@ -1,3 +1,5 @@
+
+"use strict";
 /**
  * es6 modules and imports
  */
@@ -11,11 +13,15 @@ sayHello('World');
  */
 const getMovies = require('./getMovies.js');
 
+const showNewList = () => {
+
+
+
 getMovies().then((movies) => {
   let htmlStr = "<div>";
 
-  movies.forEach(({title, rating, movie}) => {
-    htmlStr += `<h3>movie${movie} - ${title} - rating: ${rating}</h3>`;
+  movies.forEach(({title, rating, id}) => {
+    htmlStr += `<h3>movie${id} = ${title} - rating: ${rating}</h3>`;
   });
   htmlStr += "</div>";
   $(".all-movies").html(htmlStr);
@@ -27,6 +33,39 @@ getMovies().then((movies) => {
   console.log(error);
 });
 
+};
+
+showNewList();
+//insertBtn id
+//
+// $().click(function(){
+//
+// };
+
+
+$("#insertBtn").click(function(e){
+    e.preventDefault();
+    let title=$("#formTitle").val();
+    let rating=$("#formRating").val();
+
+    let movie = {
+    title: title,
+    rating: rating,
+    };
+    console.log(movie);
+
+    fetch('/api/movies', {
+        headers: {
+            "content-type": "application/json"
+        },
+        method: "POST",
+        body: JSON.stringify({title, rating})
+    }).then( (response) => {
+        response.json();
+    } ).then( () => {
+        showNewList();
+    })
+});
 
 
 
