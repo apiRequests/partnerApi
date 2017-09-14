@@ -21,7 +21,10 @@ getMovies().then((movies) => {
   let htmlStr = "<div>";
 
   movies.forEach(({title, rating, id}) => {
-    htmlStr += `<h3>movie${id} = ${title} - rating: ${rating}</h3>`;
+    htmlStr += `<h3>movie${id} = ${title} - rating: ${rating}</h3>
+    <button>Edit</button>
+    <button>Delete</button>`;
+
   });
   htmlStr += "</div>";
   $(".all-movies").html(htmlStr);
