@@ -3,13 +3,17 @@
     {
       "title": "Casablanca",
       "rating": "4",
-      "id": 1
+      "movie": 1
     },
     {
       "title": "Star Wars: A New Hope",
       "rating": "5",
-      "id": 2
+      "movie": 2
+    },
+    {
+      "title": "The Avengers",
+      "rating": "5",
+      "movie": 3
     }
-
   ]
 }

@@ -14,8 +14,8 @@ const getMovies = require('./getMovies.js');
 getMovies().then((movies) => {
   let htmlStr = "<div>";
 
-  movies.forEach(({title, rating, id}) => {
-    htmlStr += `<h3>id#${id} - ${title} - rating: ${rating}</h3>`;
+  movies.forEach(({title, rating, movie}) => {
+    htmlStr += `<h3>movie${movie} - ${title} - rating: ${rating}</h3>`;
   });
   htmlStr += "</div>";
   $(".container").html(htmlStr);
@@ -25,17 +25,6 @@ getMovies().then((movies) => {
   console.log(error);
 });
 
-
-// let myVar;
-//
-// function myFunction() {
-//     myVar = setTimeout(showPage, 3000);
-// }
-//
-// function showPage() {
-//     document.getElementById("loader").style.display = "none";
-//     document.getElementById("myDiv").style.display = "block";
-// }
 
 
 
