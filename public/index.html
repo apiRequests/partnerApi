@@ -7,35 +7,46 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
           crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css" />
+    <style>
+        /* Center the loader */
+        #loader {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            width: 150px;
+            height: 150px;
+            margin: -75px 0 0 -75px;
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+             -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+        </style>
 
 </head>
 <body>
-
-<input type="text" name="latitude" placeholder="Enter Latitude" value="">
-Longitude:
-<input type="text" name="longitude" placeholder="Enter Longitude" value="">
-<button id="locationSearch">Submit</button>
+<!--<input type="text" name="latitude" placeholder="Enter Latitude" value="">-->
+<!--Longitude:-->
+<!--<input type="text" name="longitude" placeholder="Enter Longitude" value="">-->
+<!--<button id="locationSearch">Submit</button>-->
 <!--<div id="loader"></div>-->
 
     <div class="container">
         <h1>Hello There!</h1>
-        <!--<p>To get started, edit <code>src/index.js</code>.</p>-->
+        <p>To get started, edit <code>src/index.js</code>.</p>
     </div>
-
     <script src="/main.js"></script>
 
-    <!--<script>-->
-        <!--var myVar;-->
+<div id="loader"></div>
 
-        <!--function myFunction() {-->
-            <!--myVar = setTimeout(showPage, 3000);-->
-        <!--}-->
-
-        <!--function showPage() {-->
-            <!--document.getElementById("loader").style.display = "none";-->
-            <!--document.getElementById("myDiv").style.display = "block";-->
-        <!--}-->
-    <!--</script>-->
+<div style="display:none;" id="myDiv" class="animate-bottom">
+    <h2>Tada!</h2>
+    <p>Some text in my newly loaded page..</p>
+</div>
 
 <script
         src="http://code.jquery.com/jquery-3.2.1.min.js"
@@ -49,6 +60,7 @@ Longitude:
         src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous">
+
 
 </script>
 </body>

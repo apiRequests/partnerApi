@@ -18,7 +18,7 @@ getMovies().then((movies) => {
     htmlStr += `<h3>id#${id} - ${title} - rating: ${rating}</h3>`;
   });
   htmlStr += "</div>";
-  $("body").html(htmlStr);
+  $(".container").html(htmlStr);
 
 }).catch((error) => {
   alert('Oh no! Something went wrong.\nCheck the console for details.')
