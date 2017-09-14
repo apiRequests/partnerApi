@@ -18,7 +18,9 @@ getMovies().then((movies) => {
     htmlStr += `<h3>movie${movie} - ${title} - rating: ${rating}</h3>`;
   });
   htmlStr += "</div>";
-  $(".container").html(htmlStr);
+  $(".all-movies").html(htmlStr);
+  $(".movie-form").removeClass("hidden");
+  $(".loader").hide();
 
 }).catch((error) => {
   alert('Oh no! Something went wrong.\nCheck the console for details.')
