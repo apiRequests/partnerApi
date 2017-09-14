@@ -9,7 +9,6 @@ html, body {
     text-align: center;
 }
 
-      Center the loader
  #loader {
      position: absolute;
      left: 50%;
@@ -21,8 +20,6 @@ html, body {
      border: 16px solid #f3f3f3;
      border-radius: 50%;
      border-top: 16px solid #3498db;
-     width: 120px;
-     height: 120px;
      -webkit-animation: spin 2s linear infinite;
      animation: spin 2s linear infinite;
  }
@@ -60,3 +57,4 @@ html, body {
     display: none;
     text-align: center;
 }
+
