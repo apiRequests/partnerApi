@@ -11,23 +11,23 @@
 </head>
 <body>
 
-
+<div class="loader">
+    <div id="loader"></div>
+    <h4 class="loading">loading...</h4>
+</div>
+<div class="panel panel-info">
 <div class="container">
-    <div class="loader">
-        <div id="loader"></div>
-        <h3>loading...</h3>
+    <div id="allMovies">
     </div>
-    <div class="all-movies">
 
-    </div>
     <div class="movie-form hidden">
             <br>
-        <div><h2>What is your favorite movie?</h2></div>
-        <form action="/db.json" method="POST">
-            <p>Movies: <input id="formTitle" type="text" name="movie name" value=""></p>
+        <form action="/db.json" method="POST" id="addForm">
+            <h2><em>What is your favorite movie?</em></h2>
+            <h4>Movies: <input id="formTitle" type="text" name="movie name" value=""></h4>
             <div>Rating
                 <select id="formRating">
-                    <option class="disabled">Rate Me</option>
+                    <option class="disabled"></option>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -39,8 +39,26 @@
             <br>
             <button id="insertBtn" class="btn btn-primary">Submit</button>
         </form>
-
+        <form method="POST" class="update1" id="updateAlign">
+            <div><h2><em>Edit movie</em></h2></div>
+            <h4>Movies: <input id="formTitleTwo" type="text" name="movie name" value=""></h4>
+            <label for="id">id</label>
+            <input id="id" type="text">
+            <div id="rateAlign">Rating
+                <select id="formRatingTwo">
+                    <option class="disabled"></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <br>
+            <button id="insertBtnUpdate" class="btn btn-primary">Update</button>
+        </form>
     </div>
+</div>
 </div>
 
 
